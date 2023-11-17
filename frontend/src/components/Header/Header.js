@@ -8,6 +8,7 @@ function Header() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
+        <a href = "/test1">Go to Test1</a>
         <p className={styles.heading}>
           A <span>Resume</span> that stands out!
         </p>

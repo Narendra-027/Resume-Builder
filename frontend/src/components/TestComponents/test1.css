@@ -1,0 +1,36 @@
+/* YourComponent.css */
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 58rem;
+  }
+
+
+  
+  .left-column {
+    flex: 1;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    height: 58rem;
+  }
+  
+  .left-header {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Set the background color for the header */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .left-content {
+    padding: 10px;
+  }
+  
+  .right-column {
+    min-width: 10px; /* Set a minimum width for the right column */
+    max-width: 50%; /* Set a maximum width if needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+  }

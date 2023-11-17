@@ -624,12 +624,10 @@ function Editor(props) {
   }, [activeSectionKey]);
 
   useEffect(() => {
-    console.log("U2: SecTitle", sectionTitle);
     setActiveInformation(information[sections[activeSectionKey]]);
   }, [information]);
 
   useEffect(() => {
-    console.log("U3: SecTitle", sectionTitle);
     const details = activeInformation?.details;
     if (!details) return;
 
@@ -653,7 +651,6 @@ function Editor(props) {
   }, [activeDetailIndex]);
 
   useEffect(() => {
-    console.log("U4: SecTitle", sectionTitle);
     handleSubmission();
   }, [sectionTitle, values]);
 

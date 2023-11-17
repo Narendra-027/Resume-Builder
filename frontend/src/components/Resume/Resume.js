@@ -8,7 +8,7 @@ import {
   Paperclip,
   Phone,
 } from "react-feather";
-import { Document, Page, PDFViewer } from 'react-pdf';
+// import { Document, Page, PDFViewer } from 'react-pdf';
 import styles from "./Resume.module.css";
 
 const Resume = forwardRef((props, ref) => {
@@ -398,7 +398,7 @@ const Resume = forwardRef((props, ref) => {
 
   return (
     <div ref={ref}>
-      <div ref={containerRef} className={styles.container} id="resume1">
+      <div ref={containerRef} className={styles.resume} id="resume1">
         <div className={styles.header}>
           <p className={styles.heading}>{info.basicInfo?.detail?.name}</p>
           <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>

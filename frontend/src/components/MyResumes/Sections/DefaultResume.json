@@ -1,0 +1,183 @@
+{
+    "Basic Info": {
+      "id": "Basic Info",
+      "sectionTitle": "Basic Info",
+      "detail": {
+        "name": "Narendra Jani",
+        "title": "Final Yearite at IIT Jodhpur",
+        "linkedin": "https://www.linkedin.com/in/narendra-jani-027/",
+        "github": "https://www.github.com/Narendra-027/",
+        "email": "narendra.1@iitj.ac.in",
+        "phone": "7877947828"
+      }
+    },
+    "Experience": {
+      "id": "Experience",
+      "sectionTitle": "Experience",
+      "details": [
+        {
+          "certificationLink": "https://www.github.com/Narendra-027/",
+          "title": "BIG DATA ENGINEER",
+          "startDate": "2023-09-02",
+          "endDate": "2023-09-29",
+          "companyName": "Decimal Point Analytics",
+          "location": "Bengluru",
+          "points": [
+            "Spearheaded development of scalable data pipelines with Apache Spark and Hadoop",
+            "Achieved 20% cost reduction in data storage while optimizing query performance",
+            "Strengthened data security and ensured compliance with industry regulations"
+          ]
+        }
+      ]
+    },
+    "Projects": {
+      "id": "Projects",
+      "sectionTitle": "Projects",
+      "details": [
+        {
+          "link": "https://github.com/Narendra-027/Graph-Convolutional-Networks-for-Active-Learning",
+          "title": "ACTIVE LEARNING WITH GRAPH CN",
+          "type": "",
+          "startDate": "2023-08-02",
+          "endDate": "2023-09-03",
+          "overview": "PyTorch | OpenCV | matplotlib",
+          "github": "https://github.com/Narendra-027/Graph-Convolutional-Networks-for-Active-Learning",
+          "points": [
+            "Utilized Graph Convolutional Networks (GCN) for selecting potential samples in Active Learning framework",
+            "Enhanced model performance, reduced training time by 90\\% and labelling cost by 80%",
+            "Tested on four image classification benchmarks: CIFAR10, CIFAR100, GTSRB, FashionMNIST"
+          ]
+        },
+        {
+          "link": "https://github.com/Narendra-027/Flight-Data-Analysis",
+          "title": "FLIGHT DATA ANALYSIS",
+          "type": "",
+          "startDate": "2023-09-02",
+          "endDate": "2023-09-22",
+          "overview": "Amazon S3 | Amazon Redshift | AWS Glue | Power BI",
+          "github": "https://github.com/Narendra-027/Flight-Data-Analysis",
+          "points": [
+            "Utilized Amazon Web Services (AWS) to build a data pipeline that facilitates the storage, ETL jobs, and analysis of U.S. flight data",
+            "Created cloud data warehouse with Amazon Redshift",
+            "Designed a Power BI visualization tool to illustrate key findings from the data"
+          ]
+        },
+        {
+          "link": "https://github.com/Narendra-027/Expression-to-Emoji",
+          "title": "FACIAL EXPRESSION DETECTION",
+          "type": "",
+          "startDate": "2023-07-07",
+          "endDate": "2023-08-04",
+          "overview": "TensorFlow | OpenCV | Haar Cascade XML",
+          "github": "https://github.com/Narendra-027/Expression-to-Emoji",
+          "points": [
+            "Developed a deep learning model to classify facial expressions from images or videos and mapped them to avatars or emojis",
+            "Implemented Active Learning framework to reduce training time",
+            "Deployed the model on a local computer webcam using OpenCV’s Haar Cascade XML"
+          ]
+        }
+      ]
+    },
+    "Education": {
+      "id": "Education",
+      "sectionTitle": "Education",
+      "details": [
+        {
+          "title": "B.Tech in Mechanical Engineering",
+          "college": "IIT Jodhpur",
+          "startDate": "2023-05-12",
+          "endDate": "2023-09-14",
+          "result": "CGPA: 8.25"
+        },
+        {
+          "title": "Senior Secondary",
+          "college": "Apex Senior Secondary School, Jodhpur",
+          "startDate": "2023-09-01",
+          "endDate": "2023-09-12",
+          "result": "94.60%"
+        },
+        {
+          "title": "Secondary",
+          "college": "ABVM Senior Secondary School, Jodhpur",
+          "startDate": "2023-09-09",
+          "endDate": "2023-09-14",
+          "result": "90.00%"
+        }
+      ]
+    },
+    "Skills": {
+      "id": "Skills",
+      "sectionTitle": "Skills",
+      "details": [
+        {
+          "title": "Languages",
+          "points": [
+            "Python",
+            "C/C++",
+            "Kotlin",
+            "HTML",
+            "CSS",
+            "javascript",
+            "MATLAB",
+            "SQL"
+          ]
+        },
+        {
+          "title": "ML & DS",
+          "points": [
+            "TensorFlow",
+            "PyTorch",
+            "Matplotlib",
+            "PowerBI",
+            "DL",
+            "NLP"
+          ]
+        },
+        {
+          "title": "Web/APP & Tools",
+          "points": [
+            "ReactJs",
+            "NodeJs",
+            "MongoDB",
+            "AWS",
+            "BootStrap",
+            "GitHub",
+            "LaTeX"
+          ]
+        }
+      ]
+    },
+    "Achievements": {
+      "id": "Achievements",
+      "sectionTitle": "Achievements",
+      "points": [
+        "Second runner-up among 30 teams in Samsung pitching competition held at IITJ",
+        "Ranked among the top 1% in JEE Advanced Examination",
+        "253th Rank in COMEDK colleges entrance exam"
+      ]
+    },
+    "Coursework": {
+      "id": "Coursework",
+      "sectionTitle": "Coursework",
+      "points": [
+        "Introduction to Machine Learning",
+        "Introduction to Computer Science",
+        "Data Structures and Algorithms",
+        "Calculus and differential equations",
+        "Stat. Inference & Simulation techniques",
+        "Introduction to Data Science",
+        "Time series analysis"
+      ]
+    },
+    "Position of Responsibility": {
+      "id": "Position of Responsibility",
+      "sectionTitle": "Position of Responsibility",
+      "points": [
+        "Class Representative | Mechanical 2020 Batch | IIT Jodhpur",
+        "Public Relations Head | IGNUS-23 (Cultural-Fest) | IIT Jodhpur",
+        "Public Relations Asst. Head | Varchas-22 (Sports-Fest) | IIT Jodhpur",
+        "Technical Events Asst. Head | Prometeo-21 (Tech-Fest) | IIT Jodhpur"
+      ]
+    }
+  }
+  

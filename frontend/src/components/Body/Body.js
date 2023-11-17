@@ -1,18 +1,22 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import ReactToPrint from "react-to-print";
+import Axios from 'axios';
 import { ArrowDown } from "react-feather";
-
 import Editor from "../Editor/Editor";
 import Resume from "../Resume/Resume";
-
 import styles from "./Body.module.css";
-import { downloadResumeJSON } from './Sections/downLoadJSON';
+import {Input} from 'antd';
+// import { downloadResumeJSON } from './Sections/downLoadJSON';
 
-function Body() {
+function Body(props) {
+  const { location } = props; // Destructure the location prop from the props object
+  const { state } = location; // Destructure the state object from the location object
+  const { resumeId, userId } = state; // Destructure the resumeId from the state object
+
   const colors = ["#239ce2", "#48bb78", "#0bc5ea", "#a0aec0", "#ed8936"];
   const sections = {
     basicInfo: "Basic Info",
-    workExp: "Work Experience",
+    workExp: "Experience",
     project: "Projects",
     education: "Education",
     skill: "Skills",
@@ -21,7 +25,7 @@ function Body() {
     por : "Position of Responsibility",
   };
   const resumeRef = useRef();
-
+  const [title, setTitle] = useState([]);
   const [activeColor, setActiveColor] = useState(colors[0]);
   const [resumeInformation, setResumeInformation] = useState({
     [sections.basicInfo]: {
@@ -65,26 +69,38 @@ function Body() {
       points: [],
     },
   });
-  const handleFileUpload = (event) => {
-    const selectedFile = event.target.files[0];
-    if (selectedFile) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        try {
-          const uploadedData = JSON.parse(e.target.result);
-          console.log("Uploaded JSON data:", uploadedData);
-          setResumeInformation(uploadedData);
-        } catch (error) {
-          console.error("Error parsing JSON:", error);
-        }
-      };
-      reader.readAsText(selectedFile);
-    }
-  };
 
+  useEffect(() =>{
+    Axios.get(`/api/resume/resume_by_id?id=${resumeId}&type=single`).then(
+      response =>{
+        setTitle(response.data[0].title);
+        setResumeInformation(response.data[0].resume);
+      }
+    )
+  },[resumeId]);
+
+  
+
+  const onSave = ()=>{
+    const variable = {
+      resume: resumeInformation,
+      userId: userId,
+      title: title,
+      resumeId: resumeId
+    }
+    Axios.post('/api/resume/updateResume', variable)
+      .then(response =>{
+        if(response.data.success){
+          alert("resume updated Successfully");
+        }else{
+          console.log("err: ", response.data);
+          alert('Failed to update Resume');
+        }
+      })
+  }
   return (
-    <div className={styles.container}>
-      <p className={styles.heading}>Resume Builder</p>
+    <div className={styles.container} style={{backgroundColor: '#A3BCB6'}}>
+      <p className={styles.heading} style={{color: '#fff'}}>Resume Builder</p>
       <div className={styles.toolbar}>
         <div className={styles.colors}>
           {colors.map((item) => (
@@ -98,19 +114,20 @@ function Body() {
             />
           ))}
         </div>
-
-        <input
-          type="file"
-          accept=".json"
-           onChange={handleFileUpload}
-        />
+        <div>
+          <Input placeholder="Borderless" 
+             addonBefore="title"
+             bordered={true} 
+             value={title} 
+             onChange={(event) => setTitle(event.target.value)}
+            />
+        </div>
         <div className={styles.download_data}>
-          <button onClick={() => downloadResumeJSON(resumeInformation)}>Resume JSON <ArrowDown /></button>
+          <button onClick={onSave} style={{}}>Save Resume</button>
           <ReactToPrint
             trigger={() => {
-              console.log("resumeRef", resumeRef.current);
               return (
-                <button>Resume PDF <ArrowDown /></button>
+                <button> Download </button>
               );
             }}
             content={() => resumeRef.current}
